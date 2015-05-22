@@ -9,7 +9,7 @@ go get github.com/tquach/zk-rest-api
 
 Or use Docker. Specify a comma-separated list of Zookeeper hosts as `ZK_HOSTS`:
 ```
-docker run tquach/zk-rest-api -e ZK_HOSTS=localhost
+docker run --name zkapi -e ZK_HOSTS=docker1 -p 8009:8080 tquach/zk-rest-api
 ```
 
 ### Usage
