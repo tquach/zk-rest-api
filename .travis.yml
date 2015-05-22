@@ -1,0 +1,8 @@
+language: go
+
+go:
+- '1.4.2'
+- tip
+
+install:
+  - make clean build test
