@@ -7,4 +7,5 @@ services:
   - docker
 
 script:
-  - make clean build test
+  - make build
+  - docker build -t latest .
