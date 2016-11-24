@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// SliceFlag is a custom type for converting comma-separated command line argument to a string slice.
+// StringSlice is a custom type for converting comma-separated command line argument to a string slice.
 type StringSlice []string
 
 // String returns the string representation of the flag value.

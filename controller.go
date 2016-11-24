@@ -9,6 +9,7 @@ import (
 	"github.com/samuel/go-zookeeper/zk"
 )
 
+// Controller handles HTTP requests.
 type Controller struct {
 	zkConn *zk.Conn
 }

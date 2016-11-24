@@ -1,8 +1,10 @@
 language: go
 
 go:
-- '1.4.2'
-- tip
+  - tip
 
-install:
+services:
+  - docker
+
+script:
   - make clean build test

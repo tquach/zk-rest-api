@@ -1,16 +1,10 @@
 all             : build
 
-MAKE_PATH      ?= .
+APP_NAME   		?= zk-rest-api
+DOCKER_IP      	?= $(shell docker-machine ip)
 
-include $(MAKE_PATH)/zk.make $(MAKE_PATH)/format.make
-
-APP_ENV        ?= dev
-DOCKER_IP      ?= docker1
-APP_NODE_ID    ?= $(shell hostname)
-
-# Useful when developing outside current dir (libs, other services)
-nocachebuild    :
-		go build -o $(NAME)
+build    		: 
+	godep go build -o $(APP_NAME)
 
 local           : nocachebuild start
 
@@ -18,4 +12,4 @@ re              : clean all
 
 clean_base      : clean_zk
 
-.PHONY          : clean_base re local nocachebuild test
+.PHONY          : clean_base re local build test

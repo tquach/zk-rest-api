@@ -11,6 +11,7 @@ import (
 	"github.com/tquach/zk-rest-api/strflag"
 )
 
+// Global constants.
 const (
 	DefaultZKTimeout = 10 * time.Second
 )
